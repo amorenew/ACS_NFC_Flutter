@@ -4,13 +4,16 @@ Demonstrates how to use the acs_nfc plugin.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+- Import the library:
+import 'package:acs_nfc/acs_nfc.dart';
 
-A few resources to get you started if this is your first Flutter project:
+- Open connection the connection
+    await AcsNfc.openConnection(ip: '192.168.137.1', port: '8001');
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Listen to connection Status
+    AcsNfc.connectionStatusStream.receiveBroadcastStream().listen(nfcConnectionStatus);
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- List to Nfc data
+    AcsNfc.nfcDataStream.receiveBroadcastStream().listen(nfcData);
+    
+- Data format is {"nfcBytes":"","nfcId":""}
