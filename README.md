@@ -7,7 +7,7 @@ A new flutter plugin project.
 ### Getting Started
 
 - Import the library:
-import 'package:acs_nfc/acs_nfc.dart';
+   `import 'package:acs_nfc/acs_nfc.dart';`
 
 - Open connection the connection
 
@@ -23,4 +23,4 @@ import 'package:acs_nfc/acs_nfc.dart';
     
 - Data format is:
 
-`{"nfcBytes":"","nfcId":""}`
+   `{"nfcBytes":"","nfcId":""}`
