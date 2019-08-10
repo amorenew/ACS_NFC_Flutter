@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f210301c-f0ba-4823-b059-22232bb33c3d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/android/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/.settings/org.eclipse.buildship.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/flutter/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/flutter/.settings/org.eclipse.buildship.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/flutter/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/flutter/flutter.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/acs/nfc/acs_nfc/AcsNfcPlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/Msdk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/decoder/CRC16.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/decoder/MessageDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/domain/DataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/domain/DeviceStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/domain/GSensor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/domain/GpsInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/domain/HeartBeat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/domain/IO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/domain/NfcMsg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/domain/Reply.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/domain/Rfid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/domain/Sensor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/domain/resp/ControlReplyResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/domain/resp/DeviceStatusResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/domain/resp/IoResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/domain/resp/ReplyStateResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/domain/resp/RespBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/domain/resp/RfidDistanceResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/listener/OnCommandResultListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/listener/OnConnectLinstener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/listener/OnDataListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/util/ByteUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/util/MsdkErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/sztvis/mnvrlibrary/util/TimeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/pages/about/about_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/pages/about/about_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/pages/dashboard/dashboard_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/pages/dashboard/dashboard_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/pages/dashboard/student_pick_up_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/pages/dashboard/student_pick_up_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/pages/report_incident/report_incident_dialog.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/pages/report_incident/report_incident_dialog.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/providers/messages/bloc/messages_list_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/providers/messages/bloc/messages_list_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/providers/students/bloc/students_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/providers/students/bloc/students_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/providers/students/bloc/students_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/providers/students/bloc/students_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/providers/students/students_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/providers/students/students_provider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/utils/service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/utils/service.dart" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.dart_tool/" />
+    <ignored path="$PROJECT_DIR$/.idea/" />
+    <ignored path="$PROJECT_DIR$/.pub/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <ignored path="$PROJECT_DIR$/example/.pub/" />
+    <ignored path="$PROJECT_DIR$/example/build/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/acs_nfc.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/test/acs_nfc_test.dart" />
+        <option value="$PROJECT_DIR$/lib/acs_nfc.dart" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="acs_nfc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="acs_nfc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="acs_nfc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="acs_nfc" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="acs_nfc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="acs_nfc" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="acs_nfc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="acs_nfc" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="acs_nfc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="acs_nfc" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/android" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f210301c-f0ba-4823-b059-22232bb33c3d" name="Default Changelist" comment="" />
+      <created>1565272140197</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1565272140197</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28139183" />
+      <window_info id="Captures" order="1" side_tool="true" />
+      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="Build Variants" order="5" side_tool="true" />
+      <window_info id="Resources Explorer" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Favorites" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Dart Analysis" order="0" weight="0.32960895" />
+      <window_info anchor="bottom" id="Run" order="1" weight="0.32960895" />
+      <window_info anchor="bottom" id="TODO" order="2" weight="0.32960895" />
+      <window_info anchor="bottom" id="Android Profiler" order="3" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Logcat" order="4" visible="true" weight="0.29951692" />
+      <window_info anchor="bottom" id="Debug" order="5" />
+      <window_info anchor="bottom" id="Terminal" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Flutter Performance" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Find" order="10" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Android WiFi ADB" order="2" />
+      <window_info anchor="right" id="Flutter Inspector" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="WIFI ADB ULTIMATE" order="5" />
+      <window_info anchor="right" id="Flutter Outline" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/.flutter-plugins">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/test/widget_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#907#0" expanded="true" />
+            <element signature="e#357#396#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/acs_nfc_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/acs_nfc.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
