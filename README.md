@@ -2,7 +2,7 @@
 
 A new flutter plugin project.
 #### Library Pub link
- https://pub.dev/packages/acs_nfc/versions/0.0.1
+https://pub.dev/packages/acs_nfc/
 
 ### Getting Started
 
