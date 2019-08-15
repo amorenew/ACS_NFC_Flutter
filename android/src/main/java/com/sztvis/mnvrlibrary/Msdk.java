@@ -1,5 +1,6 @@
 package com.sztvis.mnvrlibrary;
 
+import android.os.Build;
 import android.util.Log;
 
 import com.sztvis.mnvrlibrary.decoder.CRC16;
@@ -13,6 +14,7 @@ import com.sztvis.mnvrlibrary.util.MsdkErrorCode;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -54,6 +56,8 @@ public class Msdk {
                 byte[] temp = new byte[1024];
                 int size = 0;
                 onConnectLinstener.onConnectSuccess();
+                //connect success and send android serialnumber
+                sendAndroidSerialNumber();
                 while ((size = inputStream.read(temp)) > 0) {
                     byte[] res = new byte[size];
                     if (res.length > 5) {
@@ -68,15 +72,15 @@ public class Msdk {
                                 if (messageDecoder.checkCrc()) {
                                     messageDecoder.decode();
                                 } else
-                                    onConnectLinstener.OnConnectFailed(MsdkErrorCode.MESSAGE_AUTH_FAILD, "");
+                                    onConnectLinstener.OnConnectFaild(MsdkErrorCode.MESSAGE_AUTH_FAILD, "");
                             }
                         }
                     }
                 }
             } catch (IOException e) {
-                onConnectLinstener.OnConnectFailed(MsdkErrorCode.SOCKET_CONNECT_FAILD, e.getLocalizedMessage());
+                onConnectLinstener.OnConnectFaild(MsdkErrorCode.SOCKET_CONNECT_FAILD, e.getLocalizedMessage());
             } catch (Exception ex) {
-                onConnectLinstener.OnConnectFailed(MsdkErrorCode.SOCKET_CONNECT_FAILD, ex.getLocalizedMessage());
+                onConnectLinstener.OnConnectFaild(MsdkErrorCode.SOCKET_CONNECT_FAILD, ex.getLocalizedMessage());
             }
         }
     }
@@ -216,6 +220,33 @@ public class Msdk {
         bytes[bytes.length - 3] = (byte) crc16;
         writeMsg(bytes);
     }
+
+    //send android SN number to mnvr
+    private void sendAndroidSerialNumber() {
+        try {
+            String serial = Build.SERIAL;
+            byte[] bytes = new byte[40];//{(byte) 0xBF, (byte) 0xCF, 0x00, (byte) ver, 0x01, 0x09, 0x00, 0x00, (byte) 0xDF, (byte) 0xEF};
+            bytes[0] = (byte) 0xBF;
+            bytes[1] = (byte) 0xCF;
+            bytes[2] = 0x00;
+            bytes[3] = (byte) ver;
+            bytes[4] = 0x01;
+            bytes[5] = 0x09;
+            bytes[36] = 0x00;
+            bytes[37] = 0x00;
+            bytes[38] = (byte) 0xDF;
+            bytes[39] = (byte) 0xEF;
+            byte[] serialBytes = serial.getBytes("ascii");
+            System.arraycopy(serialBytes,0,bytes,6,serialBytes.length);
+            short crc16 = (short) CRC16.CRC16_Check(bytes);
+            bytes[36] = (byte) (crc16 >> 8);
+            bytes[37] = (byte) crc16;
+            writeMsg(bytes);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 }
 
