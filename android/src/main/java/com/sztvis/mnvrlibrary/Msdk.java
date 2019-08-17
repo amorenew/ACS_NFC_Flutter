@@ -72,15 +72,15 @@ public class Msdk {
                                 if (messageDecoder.checkCrc()) {
                                     messageDecoder.decode();
                                 } else
-                                    onConnectLinstener.OnConnectFaild(MsdkErrorCode.MESSAGE_AUTH_FAILD, "");
+                                    onConnectLinstener.OnConnectFailed(MsdkErrorCode.MESSAGE_AUTH_FAILD, "");
                             }
                         }
                     }
                 }
             } catch (IOException e) {
-                onConnectLinstener.OnConnectFaild(MsdkErrorCode.SOCKET_CONNECT_FAILD, e.getLocalizedMessage());
+                onConnectLinstener.OnConnectFailed(MsdkErrorCode.SOCKET_CONNECT_FAILD, e.getLocalizedMessage());
             } catch (Exception ex) {
-                onConnectLinstener.OnConnectFaild(MsdkErrorCode.SOCKET_CONNECT_FAILD, ex.getLocalizedMessage());
+                onConnectLinstener.OnConnectFailed(MsdkErrorCode.SOCKET_CONNECT_FAILD, ex.getLocalizedMessage());
             }
         }
     }

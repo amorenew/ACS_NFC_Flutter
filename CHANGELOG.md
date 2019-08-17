@@ -1,3 +1,7 @@
+## 1.0.2
+
+* Fix Bugs.
+
 ## 1.0.1
 
 * Added  send Android Serial Number function to IOT device.
