@@ -23,6 +23,8 @@ import com.sztvis.mnvrlibrary.listener.OnCommandResultListener;
 import com.sztvis.mnvrlibrary.listener.OnConnectLinstener;
 import com.sztvis.mnvrlibrary.listener.OnDataListener;
 
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
+import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
@@ -38,29 +40,24 @@ import io.reactivex.subjects.PublishSubject;
 /**
  * AcsNfcPlugin
  */
-public class AcsNfcPlugin implements MethodCallHandler {
+public class AcsNfcPlugin implements FlutterPlugin, MethodCallHandler {
 
     private static final String ACS_NFC_CONNECTION_STATUS_CHANNEL_NAME = "com.acs.nfc/connection/status";
     private static final String ACS_NFC_DATA_NFC_CHANNEL_NAME = "com.acs.nfc/data/nfc";
     private static PublishSubject<Boolean> nfcConnectionStatus = PublishSubject.create();
     private static PublishSubject<String> nfcDataStatus = PublishSubject.create();
-    private final Registrar registrar;
     Msdk msdk;
     private Result result;
-
-    public AcsNfcPlugin(Registrar registrar) {
-        this.registrar = registrar;
-    }
 
     /**
      * Plugin registration.
      */
     public static void registerWith(Registrar registrar) {
         final MethodChannel channel = new MethodChannel(registrar.messenger(), "acs_nfc");
-        initConnectionStatus(registrar);
-        initNFCData(registrar);
+        initConnectionStatus(registrar.messenger());
+        initNFCData(registrar.messenger());
 
-        final AcsNfcPlugin instance = new AcsNfcPlugin(registrar);
+        final AcsNfcPlugin instance = new AcsNfcPlugin();
 
 //        nfcConnectionStatusEventChannel.setStreamHandler(instance);
 //        nfcDataEventChannel.setStreamHandler(instance);
@@ -68,8 +65,29 @@ public class AcsNfcPlugin implements MethodCallHandler {
         channel.setMethodCallHandler(instance);
     }
 
-    private static void initConnectionStatus(Registrar registrar) {
-        final EventChannel nfcConnectionStatusEventChannel = new EventChannel(registrar.messenger(),
+    @Override
+    public void onAttachedToEngine(FlutterPluginBinding flutterPluginBinding) {
+        final MethodChannel channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "acs_nfc");
+        initConnectionStatus(flutterPluginBinding.getBinaryMessenger());
+        initNFCData(flutterPluginBinding.getBinaryMessenger());
+
+        final AcsNfcPlugin instance = new AcsNfcPlugin();
+
+//        nfcConnectionStatusEventChannel.setStreamHandler(instance);
+//        nfcDataEventChannel.setStreamHandler(instance);
+
+        channel.setMethodCallHandler(instance);
+
+    }
+
+    @Override
+    public void onDetachedFromEngine(FlutterPluginBinding flutterPluginBinding) {
+
+    }
+
+
+    private static void initConnectionStatus(BinaryMessenger messenger) {
+        final EventChannel nfcConnectionStatusEventChannel = new EventChannel(messenger,
                 ACS_NFC_CONNECTION_STATUS_CHANNEL_NAME);
         nfcConnectionStatusEventChannel.setStreamHandler(new EventChannel.StreamHandler() {
             @Override
@@ -85,8 +103,8 @@ public class AcsNfcPlugin implements MethodCallHandler {
                     @Override
                     public void onNext(Boolean connected) {
                         Log.d("connection", "======Java========");
-
-                        eventSink.success(connected);
+                        if (connected != null)
+                            eventSink.success(connected);
                     }
 
                     @Override
@@ -108,8 +126,8 @@ public class AcsNfcPlugin implements MethodCallHandler {
         });
     }
 
-    private static void initNFCData(Registrar registrar) {
-        final EventChannel nfcDataEventChannel = new EventChannel(registrar.messenger(), ACS_NFC_DATA_NFC_CHANNEL_NAME);
+    private static void initNFCData(BinaryMessenger messenger) {
+        final EventChannel nfcDataEventChannel = new EventChannel(messenger, ACS_NFC_DATA_NFC_CHANNEL_NAME);
         nfcDataEventChannel.setStreamHandler(new EventChannel.StreamHandler() {
             @Override
             public void onListen(Object o, final EventChannel.EventSink eventSink) {
@@ -325,5 +343,6 @@ public class AcsNfcPlugin implements MethodCallHandler {
             }
         });
     }
+
 
 }

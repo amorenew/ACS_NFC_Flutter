@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/acs_nfc.iml" filepath="$PROJECT_DIR$/acs_nfc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-acs_nfc.iml" filepath="$PROJECT_DIR$/android-acs_nfc.iml" group="acs_nfc" />
     </modules>
   </component>
 </project>

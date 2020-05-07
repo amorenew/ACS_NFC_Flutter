@@ -1,3 +1,11 @@
+## 1.0.4
+
+* fix bugs
+
+## 1.0.3
+
+* Upgrade to Android Plugin V2 Format.
+
 ## 1.0.2
 
 * Fix Bugs.
