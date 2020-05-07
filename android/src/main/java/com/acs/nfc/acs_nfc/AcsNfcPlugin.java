@@ -46,13 +46,8 @@ public class AcsNfcPlugin implements FlutterPlugin, MethodCallHandler {
     private static final String ACS_NFC_DATA_NFC_CHANNEL_NAME = "com.acs.nfc/data/nfc";
     private static PublishSubject<Boolean> nfcConnectionStatus = PublishSubject.create();
     private static PublishSubject<String> nfcDataStatus = PublishSubject.create();
-    private final Registrar registrar;
     Msdk msdk;
     private Result result;
-
-    public AcsNfcPlugin(Registrar registrar) {
-        this.registrar = registrar;
-    }
 
     /**
      * Plugin registration.
@@ -62,7 +57,7 @@ public class AcsNfcPlugin implements FlutterPlugin, MethodCallHandler {
         initConnectionStatus(registrar.messenger());
         initNFCData(registrar.messenger());
 
-        final AcsNfcPlugin instance = new AcsNfcPlugin(registrar);
+        final AcsNfcPlugin instance = new AcsNfcPlugin();
 
 //        nfcConnectionStatusEventChannel.setStreamHandler(instance);
 //        nfcDataEventChannel.setStreamHandler(instance);
@@ -76,7 +71,7 @@ public class AcsNfcPlugin implements FlutterPlugin, MethodCallHandler {
         initConnectionStatus(flutterPluginBinding.getBinaryMessenger());
         initNFCData(flutterPluginBinding.getBinaryMessenger());
 
-        final AcsNfcPlugin instance = new AcsNfcPlugin(registrar);
+        final AcsNfcPlugin instance = new AcsNfcPlugin();
 
 //        nfcConnectionStatusEventChannel.setStreamHandler(instance);
 //        nfcDataEventChannel.setStreamHandler(instance);
