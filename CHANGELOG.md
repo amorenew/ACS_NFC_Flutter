@@ -1,3 +1,7 @@
+## 1.0.5
+
+* update to Android X
+
 ## 1.0.4
 
 * fix bugs
