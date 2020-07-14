@@ -24,3 +24,10 @@ https://pub.dev/packages/acs_nfc/
 - Data format is:
 
    `{"nfcBytes":"","nfcId":""}`
+
+
+Samples:
+
+![alt text](https://github.com/amreniouinnovent/ACS_NFC_Flutter/blob/master/img2.jpeg)
+
+![alt text](https://github.com/amreniouinnovent/ACS_NFC_Flutter/blob/master/img1.png)
