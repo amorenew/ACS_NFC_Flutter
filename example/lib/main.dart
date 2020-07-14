@@ -29,8 +29,11 @@ class _MyAppState extends State<MyApp> {
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }
+    AcsNfc.connectionStatusStream
+        .receiveBroadcastStream()
+        .listen(nfcConnectionStatus);
+
     await AcsNfc.openConnection(ip: '192.168.137.1', port: '8001');
-    AcsNfc.connectionStatusStream.receiveBroadcastStream().listen(nfcConnectionStatus);
     AcsNfc.nfcDataStream.receiveBroadcastStream().listen(nfcData);
     // If the widget was removed from the tree while the asynchronous platform
     // message was in flight, we want to discard the reply rather than calling
@@ -50,7 +53,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   List<String> nfcTags = [];
-  void nfcData(dynamic  nfcJsonData) {
+  void nfcData(dynamic nfcJsonData) {
     print('=========================================');
     print(nfcJsonData);
     setState(() {
@@ -69,8 +72,45 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             children: <Widget>[
               Text('Running on: $_platformVersion\n'),
-              Text('MNVR connection status: $isMNVRConnected'),
-              ...nfcTags.map((text) =>Text('NFC Tag: $text')),
+              Text(
+                'MNVR connection status: $isMNVRConnected',
+                style: TextStyle(
+                  color: Colors.purple,
+                  fontSize: 28,
+                ),
+              ),
+              Text(
+                'ip: 192.168.137.1, port: 8001',
+                style: TextStyle(
+                  color: Colors.blueAccent,
+                  fontSize: 28,
+                ),
+              ),
+              Text(
+                'Connect MNVR by sim card',
+                style: TextStyle(
+                  color: Colors.white,
+                  backgroundColor: Colors.black,
+                  fontSize: 20,
+                ),
+              ),
+              Text(
+                'adb tcpip 5555 ',
+                style: TextStyle(
+                  color: Colors.white,
+                  backgroundColor: Colors.black,
+                  fontSize: 20,
+                ),
+              ),
+              Text(
+                'adb connect 192.168.16.100:5555',
+                style: TextStyle(
+                  color: Colors.white,
+                  backgroundColor: Colors.black,
+                  fontSize: 20,
+                ),
+              ),
+              ...nfcTags.map((text) => Text('NFC Tag: $text')),
             ],
           ),
         ),
