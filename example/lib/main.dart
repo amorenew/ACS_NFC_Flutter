@@ -110,6 +110,15 @@ class _MyAppState extends State<MyApp> {
                   fontSize: 20,
                 ),
               ),
+              Text(
+                '\nConnect Wifi Router: 192.168.16.254\nClick HiLink Logo> Operation Mode>\nGateway for Simcard, Not AP Client(Wifi)',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  backgroundColor: Colors.green.shade900,
+                  fontSize: 20,
+                ),
+              ),
               ...nfcTags.map((text) => Text('NFC Tag: $text')),
             ],
           ),
