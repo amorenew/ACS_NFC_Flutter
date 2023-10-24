@@ -1,3 +1,7 @@
+## 1.0.7
+
+* update docs
+
 ## 1.0.6
 
 * update docs
