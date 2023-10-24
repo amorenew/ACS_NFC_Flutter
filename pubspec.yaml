@@ -1,6 +1,6 @@
 name: acs_nfc
 description: ACS NFC Reader flutter plugin project which is used for reading NFC from ACS NFC Reader devices.
-version: 1.0.5
+version: 1.0.6
 homepage: https://github.com/amorenew/ACS_NFC_Flutter.git
 environment:
   sdk: ">=2.4.0 <3.0.0"

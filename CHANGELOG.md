@@ -1,3 +1,7 @@
+## 1.0.6
+
+* update docs
+
 ## 1.0.5
 
 * update to Android X
