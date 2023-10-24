@@ -28,6 +28,6 @@ https://pub.dev/packages/acs_nfc/
 
 Samples:
 
-![alt text](https://raw.githubusercontent.com/amorenew/ACS_NFC_Flutter/master/img2.png)
+![alt text](https://raw.githubusercontent.com/amorenew/ACS_NFC_Flutter/master/img2.jpeg)
 
 ![alt text](https://raw.githubusercontent.com/amorenew/ACS_NFC_Flutter/master/img1.png)
